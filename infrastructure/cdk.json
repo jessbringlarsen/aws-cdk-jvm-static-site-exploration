@@ -1,5 +1,5 @@
 {
-  "app": "mvn -e -q compile exec:java",
+  "app": "mvn -e -q compile exec:java -Dexec.mainClass=dk.bringlarsen.aws.JlaCDKExploration",
   "watch": {
     "include": [
       "**"
@@ -13,6 +13,7 @@
     ]
   },
   "context": {
+    "domain": "bring-larsen.net", "subdomain": "frontend",
     "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
     "@aws-cdk/core:checkSecretUsage": true,
     "@aws-cdk/core:target-partitions": [
